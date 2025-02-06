@@ -42,4 +42,4 @@ Después de convertir las guías clínicas de PDF a TXT, el siguiente paso es li
 #### notas adicionales
 
 - **Limitaciones del Corrector Ortográfico**: 
-  El script encargado de la corrección ortográfica fue diseñado específicamente para los primeros archivos procesados, utilizando un diccionario personalizado creado manualmente. Como resultado, es posible que no corrija todas las faltas de ortografía en archivos nuevos o diferentes. Se recomienda revisar manualmente los archivos después de la corrección para asegurar la precisión ortográfica.
+  El script encargado de la corrección ortográfica fue diseñado específicamente para los primeros archivos procesados, utilizando un diccionario personalizado. Como resultado, es posible que no corrija todas las faltas de ortografía en archivos nuevos o diferentes. Se recomienda revisar manualmente los archivos después de la corrección para asegurar la precisión ortográfica.
