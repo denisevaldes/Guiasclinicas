@@ -4,7 +4,6 @@ Convierte la primera página de un PDF a imagen y extrae el texto con OCR.
 from pdf2image import convert_from_path
 from PIL import ImageFilter
 from limpieza import limpiar_caracteres_no_deseados
-#from ortografia import revisar_ortografia, format_spelling_report
 import pytesseract
 
 def extraer_primera_pag (path):
@@ -41,9 +40,5 @@ def extraer_primera_pag (path):
     
     # Volver a unir el texto
     result = '\n'.join(filtered_lines)
-    #result, correcciones = revisar_ortografia(result)
-
-    # Imprimir reporte de correcciones
-    #print("\n" + format_spelling_report(correcciones))
 
     return result
