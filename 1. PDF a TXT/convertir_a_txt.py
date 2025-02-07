@@ -7,7 +7,6 @@ Se genera un archivo de texto con el texto limpio y las tablas
 import pdfplumber
 from limpieza import limpiar_caracteres_no_deseados
 from texto_duplicado import texto_sin_duplicados
-#from ortografia import format_spelling_report
 from filtrar_tablas import filtrar_tablas_por_flujograma
 from extraer_pagina import extraer_primera_pag
 from texto_molesto import filtrar_tabla
@@ -58,7 +57,6 @@ def convertir_a_txt(pdf, txt):
             # Eliminar duplicados de texto
             texto_filtrado = texto_sin_duplicados(texto_limpio, tablas_relevantes)
             #texto_filtrado = texto_sin_duplicados(texto_filtrado, flujogramas)
-            #texto_final, correcciones = revisar_ortografia(texto_filtrado)
 
             texto_total += f"\n--- Página {pagina_num + 1} ---\n"
             texto_total += texto_filtrado + "\n"
@@ -68,9 +66,6 @@ def convertir_a_txt(pdf, txt):
                 texto_total += f"Tabla {idx + 1}:\n"
                 for fila in tabla:
                     texto_total += "\t".join(str(celda) if celda else "" for celda in fila) + "\n"
-
-    # Imprimir reporte de correcciones
-    #print("\n" + format_spelling_report(correcciones))
 
     with open(txt, "w", encoding="utf-8") as archivo_txt:
         archivo_txt.write(texto_total)
